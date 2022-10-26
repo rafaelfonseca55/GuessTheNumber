@@ -11,7 +11,7 @@ fun game() {
     var tries = 1
     println("Guess a number from $min to $max. Default Value = 50")
     var guess = readLine()?.ifBlank { 50 }.toString()
-    if (guess.toInt() == answer) return println("You guessed it right! You guessed it in 1 try!")
+    if (guess.toInt() == answer) return println("You guessed it right! You guessed it in $tries try!")
 
     while (!correct) {
         if (guess.toInt() > answer) {
